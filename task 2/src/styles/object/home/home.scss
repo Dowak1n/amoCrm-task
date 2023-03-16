@@ -1,0 +1,235 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1140px;
+}
+
+.background {
+  background: url("../../../assets/bg-deskstop.png") no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 0 auto;
+}
+
+.left-content {
+  color: $c-white;
+  line-height: 58px;
+
+  .left-content-text {
+    max-width: 362px;
+    font: 400 48px "Inter", serif;
+  }
+
+  .left-content-gradient-text {
+    font: 900 48px "Inter", serif;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: $c-first-gradient;
+    margin-bottom: 30px;
+  }
+
+  .left-content-gradient-under-text {
+    max-width: 275px;
+    font: 400 18px "Montserrat", serif;
+    line-height: 22px;
+    color: $c-white;
+  }
+}
+
+.right-content {
+  text-align: right;
+  color: $c-white;
+  padding-top: 15px;
+
+  .right-content-text {
+    font: 500 18px "Inter", serif;
+    line-height: 22px;
+
+    .right-content-text-gradient {
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-image: $c-second-gradient;
+    }
+  }
+
+  .right-content-button {
+    font: 500 16px "Inter", serif;
+    border: none;
+    text-align: center;
+    padding: 21px 35px;
+    color: $c-white;
+    background: $c-blue;
+    cursor: pointer;
+  }
+
+  .right-content-box {
+    padding: 40px 0 61px 0;
+
+    .right-content-first-line {
+      display: flex;
+      margin-bottom: 30px;
+      justify-content: right;
+
+      .first-content-padding {
+        padding-right: 31px;
+      }
+    }
+
+    .right-content-second-line {
+      display: flex;
+      justify-content: right;
+
+      .second-content-padding {
+        padding-right: 36px;
+      }
+    }
+
+    .right-content-headings {
+      font: 500 18px "Inter", serif;
+      line-height: 22px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .right-content-info {
+      font: 400 16px "Montserrat", serif;
+      line-height: 20px;
+    }
+  }
+
+  .main-mobile-list-right {
+    display: block;
+    list-style-type: none;
+  }
+
+  .main-mobile-list-left {
+    list-style-type: none;
+    display: block;
+    padding-right: 10px;
+  }
+
+  .main-mobile-list-left li {
+    padding-left: 15px;
+    background-image: url("../../../assets/line.svg");
+    background-position: 0 21px;
+    background-size: 10px 1px;
+    background-repeat: no-repeat;
+  }
+
+  .main-mobile-list-right li {
+    padding-left: 15px;
+    background-image: url("../../../assets/line.svg");
+    background-position: 0 21px;
+    background-size: 10px 1px;
+    background-repeat: no-repeat;
+  }
+
+  .main-mobile-list-element {
+    font-family: "Montserrat", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding-top: 14px;
+  }
+
+  .main-mobile-content {
+    display: none;
+  }
+}
+
+@media (max-width: $screen-md-max) {
+  .container {
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .right-display{
+    display: none;
+  }
+
+  .background {
+    background: url("../../../assets/bg-mobile.png") no-repeat center center
+      fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    mix-blend-mode: overlay;
+  }
+
+  .container {
+    padding: 0 0;
+  }
+
+  .home {
+    display: block;
+    padding: 40px 14px 59px 14px;
+
+    .left-content,
+    .right-content {
+      width: 100%;
+      flex: 0 0 auto;
+    }
+
+    .left-content {
+      padding-bottom: 45px;
+
+      .left-content-text {
+        font-size: 36px;
+        line-height: 44px;
+      }
+
+      .left-content-gradient-text {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .right-content {
+      text-align: start;
+      padding-top: 0;
+
+      .main-mobile-content{
+        display: flex;
+      }
+      .right-content-box {
+        padding: 6px 0 0 0;
+      }
+
+      .right-content-button {
+        display: none;
+      }
+
+      .right-content-text {
+        .right-content-text-gradient {
+          text-transform: none;
+        }
+      }
+    }
+  }
+}
